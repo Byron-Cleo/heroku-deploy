@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block base_title %} <title>AGV Accounts Page</title>{% endblock %}
+
+{% block content %}
+
+<h4>This is the Accounts HomePage</h4>
+<img src="{% static 'imgs/porsche.jpg' %}" alt="porsche">
+
+<h3>Current Loged in User: {{ request.user.email }}</h3>
+ <p>brrrrrrrrr</p>
+{% endblock %}

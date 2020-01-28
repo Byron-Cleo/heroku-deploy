@@ -1,0 +1,12 @@
+{% url 'accounts_home' as accounts_url %}
+
+<nav class="nav">
+    <ul class="nav_ul">
+        <li class="nav_li">
+            <a href="{{ accounts_url }}">Project HomePage</a>
+        </li>
+        <li class="nav_li">
+            <a href="{% url 'accounts:user_accounts_home' %}">Accounts Home</a>
+        </li>
+    </ul>
+</nav>

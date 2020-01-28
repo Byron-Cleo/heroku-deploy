@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block base_title %} <title>User Management HomePage </title>{% endblock %}
+
+{% block content %}
+
+<h4>This is the Base home</h4>
+<img src="{% static 'imgs/porsche.jpg' %}" alt="porsche">
+
+<h3>Current Loged in User: {{ request.user.email }}</h3>
+
+<h3>Current Loged in User: {{ request.user.groups }}</h3>
+
+{{ dd }} <br>
+{{ user_groups }}
+
+ {% if user_groups %}
+    <ul style="width: 35rem;">
+        {% for groups in user_groups %}
+        <li style="display: flex; background-color: greenyellow; margin-bottom: 2rem;">
+            <a style="margin: .5rem;" href="#">{{ groups }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h3>No Crop Stocks Posted Yet</h3>
+    {% endif %}
+
+{% endblock %}

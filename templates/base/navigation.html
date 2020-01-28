@@ -1,0 +1,28 @@
+{% url 'accounts_home' as accounts_url %}
+{% url 'agv_accounts_home' as agv_accounts_url %}
+{% url 'register_user' as register_url %}
+{% url 'login_user' as login_url %}
+{% url 'logout_user' as logout_url %}
+
+<nav class="nav">
+        <ul class="nav_ul">
+                <li class="nav_li">
+                    <a href="{{ accounts_url }}">Home</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{% url 'accounts:user_accounts_home' %}">User Accounts</a>
+                </li>
+            <li class="nav_li">
+                    <a href="{{ agv_accounts_url }}">AGV Accounts Dept.</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{{ register_url }}">Register User</a>
+                </li>
+                <li class="nav_li">
+                    <a href="{{ login_url }}">User Login</a>
+                </li>
+            <li class="nav_li">
+                    <a href="{{ logout_url }}">User Logout</a>
+                </li>
+        </ul>
+    </nav>
